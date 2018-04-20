@@ -1,5 +1,5 @@
 /*==================================================
-  Template Name: Void 
+  Template Name: Void
   Description: Onepage Parallax Personal Portfolio Template
   Author: thunder-team
   Author URL: https://themeforest.net/user/thunder-team
@@ -12,7 +12,7 @@
   --------------------------------------------------
   - body
     - Typography
-    - Common 
+    - Common
     - Navigation
     - Homepage
       - Intro
@@ -23,12 +23,12 @@
       - Testimonials
       - Timeline
       - Footer/Contact
-    - Media Queries 
+    - Media Queries
       - 991px
       - 767px
       - 480px
     - Preloader
-    
+
 ==================================================*/
 
 
@@ -99,7 +99,7 @@ a:hover{
 
 a,
 a:active,
-a:focus 
+a:focus
 {outline: none;}
 
 
@@ -110,7 +110,7 @@ a:focus
 section{
   position: relative;
 }
-  
+
 .container{
   max-width: 1030px;
   position: relative;
@@ -202,7 +202,7 @@ ul.element-scroll-parallax li{
   transform: translateY(0px);
   visibility: visible;
 }
-  
+
 nav.nav-center-aligned{
   background: #000;
   border: 0;
@@ -254,19 +254,19 @@ nav.nav-center-aligned .navbar-nav li a span{
   color: #6D6E71;
 }
 
-nav.nav-center-aligned .navbar-collapse, 
+nav.nav-center-aligned .navbar-collapse,
 nav.nav-center-aligned .navbar-toggle{
   border: 0;
 }
 
-nav.nav-center-aligned .navbar-toggle:focus, 
+nav.nav-center-aligned .navbar-toggle:focus,
 nav.nav-center-aligned .navbar-toggle:hover{
   background: transparent;
 }
 
 nav.nav-center-aligned .menu-sign{
-  color: #6D6E71; 
-  font-size: 16px; 
+  color: #6D6E71;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -298,6 +298,13 @@ Intro Section
 h1.name{
   font-family: "Ailerons";
   font-size: 210px;
+  color: rgba(255,255,255, .5);
+  text-align: center;
+}
+
+h1.name-sm{
+  font-family: "Ailerons";
+  font-size: 110px;
   color: rgba(255,255,255, .5);
   text-align: center;
 }
@@ -335,7 +342,7 @@ ul#scene li img{
 }
 
 ul#scene li:nth-child(4) img{
-  position: absolute; 
+  position: absolute;
   left: 0;
   right: 0;
   margin: auto;
@@ -343,7 +350,7 @@ ul#scene li:nth-child(4) img{
 }
 
 ul#scene li:nth-child(5) img{
-  position: absolute; 
+  position: absolute;
   left: 0;
   right: 0;
   margin: auto;
@@ -359,7 +366,7 @@ ul#scene li:nth-child(6) .my-info{
 }
 
 ul#scene li:nth-child(7) img{
-  position: absolute; 
+  position: absolute;
   left: 0;
   right: 0;
   margin: auto;
@@ -633,9 +640,9 @@ ul.folio-menu li:last-child::after{
 
 /*Portfolio Grids*/
 
-#portfolio {  
+#portfolio {
   margin: 1rem 0;
-  -webkit-column-count: 3; 
+  -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
   -webkit-column-gap: 1rem;
@@ -645,7 +652,7 @@ ul.folio-menu li:last-child::after{
   -moz-column-width: 33.33333333333333%;
   column-width: 33.33333333333333%;
 }
-.tile { 
+.tile {
   -webkit-transform: scale(0);
   transform: scale(0);
   -webkit-transition: all 350ms ease;
@@ -665,7 +672,7 @@ ul.folio-menu li:last-child::after{
 }
 
 .modal-content{
-  background: transparent; 
+  background: transparent;
   box-shadow: none;
   border: 0;
 }
@@ -991,7 +998,7 @@ ul.social-icons li a:hover{
 
 /*==================================================
  Media Queries
-==================================================*/ 
+==================================================*/
 
 @media only screen and (max-width : 1600px) {
   .service-background .violate{width: 38%;}
@@ -1004,51 +1011,51 @@ ul.social-icons li a:hover{
 
 /*==================================================
  CSS for width 991px
-==================================================*/ 
+==================================================*/
 
 @media only screen and (max-width : 991px) {
-   
+
   /* Intro Section-----------------------------------------------------------------------------------------------------------------------------------*/
   h1.name{font-size: 150px;}
-    
+
   /* About Section-----------------------------------------------------------------------------------------------------------------------------------*/
   #about{text-align: center;}
-   
+
   /* Services Section -----------------------------------------------------------------------------------------------------------------------------------*/
   #services{background: #191919; padding-bottom: 80px;}
   #services .service-contents{position: relative; top: 0;}
-  #services .service-contents .col-md-4{margin-bottom: 50px;}  
-  
+  #services .service-contents .col-md-4{margin-bottom: 50px;}
+
   /* Skills Section -----------------------------------------------------------------------------------------------------------------------------------*/
   .photo-skills::before{content: none;}
   #skills img.img-skills{margin: 0 auto 50px;}
-    
+
   /* Footer -----------------------------------------------------------------------------------------------------------------------------------*/
   .contact-info{top: 0;}
-  
+
 }
 
 
 /*==================================================
  CSS for width 767px
-==================================================*/ 
+==================================================*/
 
 @media only screen and (max-width : 767px) {
-  
+
   nav.nav-center-aligned .navbar-collapse{text-align: left;}
   nav.nav-center-aligned .navbar-nav li::after{content: none;}
   nav.nav-center-aligned .navbar-collapse{max-height: 100%;}
-  
+
   /* Intro Section -----------------------------------------------------------------------------------------------------------------------------------*/
   #intro::after{left: 0; right: 0; margin: auto;}
   h1.name{font-size: 100px;}
   ul#scene li:nth-child(4) img{width: 450px;}
   .yellow-box{left: 0; right: 0; margin: auto;}
-  
+
   /* Folio Section -----------------------------------------------------------------------------------------------------------------------------------*/
   #folio #portfolio{
     margin: 1rem 0;
-    -webkit-column-count: 2; 
+    -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
     -webkit-column-gap: 1rem;
@@ -1057,41 +1064,41 @@ ul.social-icons li a:hover{
     -webkit-column-width: 50%;
     -moz-column-width: 50%;
     column-width: 50%;
-  } 
-  
+  }
+
   /* Timeline Section -----------------------------------------------------------------------------------------------------------------------------------*/
   .timeline-contents::after{margin: 0;}
   .event-item .duration{float: left !important; margin: 0 0 30px 15px !important; text-align: left !important; position: relative;}
   .event-item .duration::after{left: -24px !important;}
   .event-item .event{text-align: left !important; margin-left: 15px;}
-  
+
 }
 
 
 /*==================================================
  CSS for width 480px
-==================================================*/ 
+==================================================*/
 
 @media only screen and (max-width : 480px) {
-  
+
   /* Intro Section -----------------------------------------------------------------------------------------------------------------------------------*/
   #intro::after{width: 150px;}
   .yellow-box{width: 150px;}
   h1.name{font-size: 50px;}
   ul#scene li:nth-child(4) img{width: 250px;}
   ul#scene li:nth-child(6) .my-info{bottom: 50px;}
-  
+
   /* About Section -----------------------------------------------------------------------------------------------------------------------------------*/
   .photo-block .photo img.my-photo{width: 220px;}
   .photo-block .photo img.photo-frame{width: 260px; top: -20px;}
   .photo-block ul.social-link li{padding: 0;}
-    
+
   /* Portfolio Section -----------------------------------------------------------------------------------------------------------------------------------*/
   ul.folio-menu li{display: block; text-align: left;}
   ul.folio-menu li::after{content: none;}
   #folio #portfolio{
     margin: 1rem 0;
-    -webkit-column-count: 1; 
+    -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
     -webkit-column-gap: 1rem;
@@ -1106,7 +1113,7 @@ ul.social-icons li a:hover{
 
 /*==================================================
  Preloader CSS
-==================================================*/ 
+==================================================*/
 
 .preloader{
   position: fixed;
@@ -1133,7 +1140,7 @@ ul.social-icons li a:hover{
   background-color: #F9ED32;
   float: left;
   -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
 }
 .sk-cube-grid .sk-cube1 {
   -webkit-animation-delay: 0.2s;
@@ -1169,7 +1176,7 @@ ul.social-icons li a:hover{
             transform: scale3D(1, 1, 1);
   } 35% {
     -webkit-transform: scale3D(0, 0, 1);
-            transform: scale3D(0, 0, 1); 
+            transform: scale3D(0, 0, 1);
   }
 }
 
@@ -1180,7 +1187,7 @@ ul.social-icons li a:hover{
   } 35% {
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1);
-  } 
+  }
 }
 
 
@@ -1195,7 +1202,7 @@ ul.social-icons li a:hover{
   background: #333;
   padding: 10px 30px;
   position: fixed;
-  bottom: 30px; 
+  bottom: 30px;
   right: 30px;
   color: #82B541;
   font-weight: 700;
@@ -1235,7 +1242,3 @@ ul.social-icons li a:hover{
   top: 50%;
   transform: translateY(-50%);
 }
-
-
-
-
