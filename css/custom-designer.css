@@ -97,6 +97,28 @@ a:hover{
   color: #D7DF23;
 }
 
+a.customAnchor{
+  color: #337ab7;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a.customAnchor:hover{
+  color: #286090;
+  text-decoration: none;
+}
+
+a.footerAnchor{
+  color: #fff;
+  cursor: pointer;
+}
+
+a.footerAnchor:hover{
+  color: #ffff;
+  /* font-weight: bold; */
+  text-decoration: none;
+}
+
 a,
 a:active,
 a:focus
