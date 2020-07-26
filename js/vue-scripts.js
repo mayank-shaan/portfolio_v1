@@ -1,3 +1,21 @@
+const vueAppIntro = new Vue({
+    el: '#scene2',
+    computed: {
+        supportsWebPComputed: function () {
+            return window && window.Modernizr && window.Modernizr.webplossless;
+        },
+    }
+});
+
+const vueAppIntroMobile = new Vue({
+    el: '#scene',
+    computed: {
+        supportsWebPComputed: function () {
+            return window && window.Modernizr && window.Modernizr.webplossless;
+        },
+    }
+});
+
 const vueAppSkills = new Vue({
 el: '#skills',
 data: { 

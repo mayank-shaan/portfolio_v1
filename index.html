@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-comp">
 
 <head>
 	
@@ -73,6 +73,7 @@
 
 	<link rel="stylesheet" href="css/custom-designer.css" />
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/webp-support-detect.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -130,16 +131,25 @@
 		<div class="overflow-h">
 			
 			<div class="container-fluid hidden-xs hidden-sm"
-				style="background: url('media/designer/newParalax/pp1.jpg'); background-size: cover; height: 100%; overflow: hidden;">
+				style="background: url('media/designer/newParalax/baseBackground.jpg'); background-size: cover; height: 100%; overflow: hidden;">
 				<ul id="scene2" class="scene border fill">
-					<li class="layer expand-width" data-depth="0.15"><img style="transform: scale(1.5,1)"
-							src="media/designer/newParalax/pp1-min.png" alt="msd" class="img-responsive" /></li>
-					<li class="layer expand-width" data-depth="0.30"><img src="media/designer/newParalax/pp3-min.png"
-							alt="msd" class="img-responsive" /></li>
-					<li class="layer expand-width" data-depth="0.40"><img style="transform: scale(1.2,1)"
-							src="media/designer/newParalax/pp2new-min.png" alt="msd" class="img-responsive" /></li>
-					<li class="layer expand-width" data-depth="0.55"><img style="transform: translate(12px, -0%);"
-							src="media/designer/newParalax/pp5-min.png" alt="msd" class="img-responsive" /></li>
+
+					<li class="layer expand-width" data-depth="0.15">
+						<img style="transform: scale(1.5,1)" :src="'media/designer/newParalax/backgroundSky' + (supportsWebPComputed ? '.webp' : '.png')" alt="msd" class="img-responsive" />
+					</li>
+					
+					<li class="layer expand-width" data-depth="0.30">
+						<img :src="'media/designer/newParalax/viewNatureBoard' + (supportsWebPComputed ? '.webp' : '.png')"  alt="msd" class="img-responsive" />
+					</li>
+					
+					<li class="layer expand-width" data-depth="0.40">
+						<img style="transform: scale(1.2,1)" :src="'media/designer/newParalax/stones' + (supportsWebPComputed ? '.webp' : '.png')" alt="msd" class="img-responsive" />
+					</li>
+					
+					<li class="layer expand-width" data-depth="0.55">
+						<img style="transform: translate(12px, -0%);" :src="'media/designer/newParalax/manStanding' + (supportsWebPComputed ? '.webp' : '.png')" alt="msd" class="img-responsive" />
+					</li>
+					
 					<li class="layer expand-width" data-depth="0.65">
 						<div class="my-info" data-parallax='{"y": 100}'>
 							<h3>I am a developer/designer</h3>
@@ -147,7 +157,7 @@
 						</div>
 					</li>
 					<li class="layer expand-width" data-depth="1.00"><img style="transform: scale(1.5,1)"
-							src="media/designer/newParalax/pp4-min.png" alt="msd" class="img-responsive" /></li>
+						:src="'media/designer/newParalax/ground' + (supportsWebPComputed ? '.webp' : '.png')" alt="msd" class="img-responsive" /></li>
 				</ul>
 			</div>
 			
@@ -160,7 +170,7 @@
 					<li class="layer expand-width" data-depth="0.00">
 						<div class="yellow-box"></div>
 					</li>
-					<li class="layer expand-width" data-depth="0.40"><img src="media/designer/intro-layer-self2.png"
+					<li class="layer expand-width" data-depth="0.40"><img :src="'media/designer/intro-layer-self' + (supportsWebPComputed ? '.webp' : '.png')" 
 							alt="msd" class="img-responsive" /></li>
 					<li class="layer expand-width" data-depth="0.55"><img src="media/designer/intro-layer-4.png" alt="msd"
 							class="img-responsive" /></li>
@@ -175,7 +185,6 @@
 							class="img-responsive" /></li>
 				</ul>
 			</div>
-		</div>
 		</div>
 	</section>
 
