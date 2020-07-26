@@ -59,26 +59,26 @@ $(window).on('load', function() {
 // -------------------------------------------------------------------------------
         // trigger parallax hover
         if (document.getElementById('scene2')) {
-          var scene2 = document.getElementById('scene2');
+        var scene2 = document.getElementById('scene2');
 
-          if (typeof Parallax == 'function')
-          var parallax2 = new Parallax(scene2);
+        if (typeof Parallax == 'function')
+        var parallax2 = new Parallax(scene2);
 
-          // parallax background
-          if (typeof $.fn.parallax2 == 'function')
-          $('.parallax-window').parallax2();
+        // parallax background
+        if (typeof $.fn.parallax2 == 'function')
+        $('.parallax-window').parallax2();
         }
 
         if (document.getElementById('scene')) {
-          // trigger parallax hover
-          var scene = document.getElementById('scene');
+        // trigger parallax hover
+        var scene = document.getElementById('scene');
 
-          if (typeof Parallax == 'function')
-          var parallax = new Parallax(scene);
+        if (typeof Parallax == 'function')
+        var parallax = new Parallax(scene);
 
-          // parallax background
-          if (typeof $.fn.parallax == 'function')
-          $('.parallax-window').parallax();
+        // parallax background
+        if (typeof $.fn.parallax == 'function')
+        $('.parallax-window').parallax();
 
         }
 

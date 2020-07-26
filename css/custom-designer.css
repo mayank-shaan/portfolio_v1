@@ -142,6 +142,11 @@ section{
   padding-top: 120px;
   position: relative;
 }
+.wrapper-testimonials{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
 
 .btn-primary{
   background: #F9ED32;

@@ -32,7 +32,7 @@
 	
 	<title>Mayank Shaan Dhania | Full-Stack Front-End Developer</title>
 
-	<!-- Hotjar Tracking Code for http://mayankdhania.com/ -->
+	<!-- Hotjar Tracking Code for https://mayankdhania.com/ -->
 	<script>
 		(function(h,o,t,j,a,r){
 			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -56,15 +56,23 @@
 
 	<!-- Stylesheets
 	================================================= -->
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/custom-designer.css" />
-	<link rel="stylesheet" href="css/ionicons.min.css" />
-	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="shortcut icon" type="image/png" href="media/fav2.png" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css" />
+	<!-- <link rel="stylesheet" href="css/ionicons.min.css" /> -->
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<!-- <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
 
 	<!--Google Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900" rel="stylesheet">
 	<!--Favicon-->
-	<link rel="shortcut icon" type="image/png" href="media/fav2.png" />
+
+	<link rel="stylesheet" href="css/custom-designer.css" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -82,8 +90,9 @@
 			<div class="sk-cube sk-cube8"></div>
 			<div class="sk-cube sk-cube9"></div>
 		</div>
-</div>
+	</div>
 
+<div id="vapp">
 	<!-- Navigation
 	================================================= -->
 	<header id="header" class="on-scroll">
@@ -318,68 +327,13 @@
 					<div class="headline">
 						<h2><span class="yellow">My</span> Skills</h2>
 					</div>
-					<!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p> -->
 					<div class="skillset">
-						<div class="skillbar" data-percent="98%">
-							<div class="title">Vue Js</div>
+						<div v-for="(skill, si) in skills" :key="si" class="skillbar" :data-percent="skill.percentage">
+							<div class="title">{{skill.name}}</div>
 							<div class="count-bar">
 								<div class="count"></div>
 							</div>
 						</div>
-						<div class="skillbar" data-percent="92%">
-							<div class="title">React Js</div>
-							<div class="count-bar">
-								<div class="count"></div>
-							</div>
-						</div>
-						<div class="skillbar" data-percent="97%">
-							<div class="title">Nuxtjs</div>
-							<div class="count-bar">
-								<div class="count"></div>
-							</div>
-						</div>
-						<div class="skillbar" data-percent="84%">
-							<div class="title">Angularjs</div>
-							<div class="count-bar">
-								<div class="count"></div>
-							</div>
-						</div>
-						<div class="skillbar" data-percent="73%">
-							<div class="title">Node js</div>
-							<div class="count-bar">
-								<div class="count"></div>
-							</div>
-						</div>
-						<div class="skillbar" data-percent="90%">
-							<div class="title">javascript</div>
-							<div class="count-bar">
-								<div class="count"></div>
-							</div>
-						</div>
-						<!-- <div class="skillbar" data-percent="96%">
-								<div class="title">Bootstrap Framework</div>
-								<div class="count-bar">
-								<div class="count"></div>
-							</div>
-						</div> -->
-						<!-- <div class="skillbar" data-percent="94%">
-								<div class="title">HTML(5)</div>
-								<div class="count-bar">
-								<div class="count"></div>
-							</div>
-						</div> -->
-						<!-- <div class="skillbar" data-percent="81%">
-								<div class="title">CSS(3)</div>
-								<div class="count-bar">
-								<div class="count"></div>
-							</div>
-						</div> -->
-						<!-- <div class="skillbar" data-percent="78%">
-							<div class="title">Photoshop</div>
-							<div class="count-bar">
-							<div class="count"></div>
-							</div>
-						</div> -->
 					</div>
 				</div>
 			</div>
@@ -411,24 +365,6 @@
 				<div class="tile scale-anm flyers all">
 					<img src="media/designer/portfolio/3.jpg" alt="msd" data-toggle="modal" data-target=".project-3" />
 				</div>
-				<div class="tile scale-anm web all">
-					<img src="media/designer/portfolio/4.jpg" alt="msd" data-toggle="modal" data-target=".project-4" />
-				</div>
-				<div class="tile scale-anm bcards all">
-					<img src="media/designer/portfolio/5.jpg" alt="msd" data-toggle="modal" data-target=".project-5" />
-				</div>
-				<div class="tile scale-anm web flyers all">
-					<img src="media/designer/portfolio/6.jpg" alt="msd" data-toggle="modal" data-target=".project-6" />
-				</div>
-				<div class="tile scale-anm flyers all">
-					<img src="media/designer/portfolio/7.jpg" alt="msd" data-toggle="modal" data-target=".project-7" />
-				</div>
-				<div class="tile scale-anm bcards all">
-					<img src="media/designer/portfolio/8.jpg" alt="msd" data-toggle="modal" data-target=".project-8" />
-				</div>
-				<div class="tile scale-anm bcards all">
-					<img src="media/designer/portfolio/9.jpg" alt="msd" data-toggle="modal" data-target=".project-9" />
-				</div>
 			</div>
 
 			<div class="modal fade project-1" tabindex="-1" role="dialog">
@@ -452,49 +388,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="modal fade project-4" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-						<img src="media/designer/portfolio/4.jpg" alt="msd" class="img-responsive" />
-					</div>
-				</div>
-			</div>
-			<div class="modal fade project-5" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-						<img src="media/designer/portfolio/5.jpg" alt="msd" class="img-responsive" />
-					</div>
-				</div>
-			</div>
-			<div class="modal fade project-6" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-						<img src="media/designer/portfolio/6.jpg" alt="msd" class="img-responsive" />
-					</div>
-				</div>
-			</div>
-			<div class="modal fade project-7" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-						<img src="media/designer/portfolio/7.jpg" alt="msd" class="img-responsive" />
-					</div>
-				</div>
-			</div>
-			<div class="modal fade project-8" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-						<img src="media/designer/portfolio/8.jpg" alt="msd" class="img-responsive" />
-					</div>
-				</div>
-			</div>
-			<div class="modal fade project-9" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-						<img src="media/designer/portfolio/9.jpg" alt="msd" class="img-responsive" />
-					</div>
-				</div>
-			</div>
-
 		</div>
 	</section> -->
 
@@ -511,68 +404,24 @@
 		</ul>
 		<!--Parallax End-->
 
-		<div class="container wrapper white-bg">
+		<div class="container wrapper-testimonials white-bg">
 			<div class="headline">
-				<h2>What my friends say</h2>
+				<h2>{{title}}</h2>
 			</div>
 
 			<!--Testimonial Carousel-->
 			<div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
-					<div class="item active">
+					<div :class="testimonial.classes" v-for="(testimonial, ti) in testimonials" :key="ti">
 						<div class="testimonial-client">
 							<div class="client-photo">
-								<img src="media/designer/patlani-old.jpg" alt="client" class="img-circle" />
+								<img :src="testimonial.image" alt="client" class="img-circle" />
 								<span class="quote"><i class="icon ion-quote"></i></span>
 							</div>
-							<h3>Shubham Patlani</h3>
-							<p class="text-muted">Partner technology at <span class="orange">hireXP</span></p>
+							<h3>{{testimonial.name}}</h3>
+							<span v-html="testimonial.post"></span>
 						</div>
-						<blockquote>“Working with Mayank was better than expected and we had really high expectations.
-							He is an incredibly talented developer but what really makes him stand out is his work ethic
-							and steady approach. Time after time, and without us asking, he added enhancements and
-							improvements that resulted in a better end product for us and our clients..”</blockquote>
-					</div>
-					<div class="item">
-						<div class="testimonial-client">
-							<div class="client-photo">
-								<img src="media/designer/mark.jpg" alt="client" class="img-circle" />
-								<span class="quote"><i class="icon ion-quote"></i></span>
-							</div>
-							<h3>Mark</h3>
-							<p class="text-muted">CEO at <span class="orange">Facebook</span></p>
-						</div>
-						<blockquote>“Mayank is an excellent web designer and faultless technician. He’s a pleasure to
-							work with, great value for money and will always go the extra mile when necessary.”
-						</blockquote>
-					</div>
-					<div class="item">
-						<div class="testimonial-client">
-							<div class="client-photo">
-								<img src="media/designer/akshay.jpg" alt="client" class="img-circle" />
-								<span class="quote"><i class="icon ion-quote"></i></span>
-							</div>
-							<h3>Akshay</h3>
-							<p class="text-muted">Partner technology at <span class="orange">hireXP</span></p>
-						</div>
-						<blockquote>“Mayank has done a fantastic job overall. Not only the site is to design, the code
-							is very clean and slick. Love the way he achieved the translations portion of the site.”
-						</blockquote>
-					</div>
-					<div class="item">
-						<div class="testimonial-client">
-							<div class="client-photo">
-								<img src="media/designer/obama.jpg" alt="client" class="img-circle" />
-								<span class="quote"><i class="icon ion-quote"></i></span>
-							</div>
-							<h3>Barak Obama</h3>
-							<p class="text-muted">Former president at <span class="orange">The United states of
-									America</span></p>
-						</div>
-						<blockquote>“We have the fortune of working with Mayank on a very regular basis. Every single
-							project is done in a timely fashion and is delivered exactly as is outlined. Beyond that,
-							his development skills and expertise make him an invaluable part of our process. We
-							absolutely offer our highest possible recommendation.”</blockquote>
+						<blockquote>“{{testimonial.message}}”</blockquote>
 					</div>
 
 					<!--Carousel Indicator-->
@@ -594,167 +443,18 @@
 				<h2>Timeline</h2>
 			</div>
 			<div class="timeline-contents">
-				<div class="event-item">
+				<div :class="event.eventClass" v-for="(event, ei) in  timelineEvents" :key="ei">
 					<div class="row">
-						<div class="col-sm-6">
-							<div class="duration duration-left">June 2020 - present</div>
+						<div class="col-sm-6" :class="ei%2 !== 0 ? 'col-sm-push-6': ''">
+							<div class="duration" :class="ei%2 !== 0 ? 'duration-right' : 'duration-left'">{{event.duration}}</div>
 						</div>
-						<div class="col-sm-6">
-							<div class="event event-description-right">
-								<h4>Senior Frontend Developer at Oye! Rickshaw</h4>
-								<p>
-									Oye! Rickshaw provides an app-based e-rickshaw booking facility to the users.
-									We connect people with public transportation and nearby public places.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item">
-					<div class="row">
-						<div class="col-sm-6 col-sm-push-6">
-							<div class="duration duration-right">December 17 2018</div>
-						</div>
-						<div class="col-sm-6 col-sm-pull-6">
-							<div class="event event-description-left">
-								<h4>Hugged Shah Rukh Khan ❤️</h4>
-								<p>Yes that actually happend.
-									<a class="customAnchor" href="https://www.facebook.com/photo.php?fbid=2157405180978918&set=a.123091254410331&type=3&theater" target="_blank">
-										Check for yourslef 😛
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="duration duration-left">August 2018 - July 2020</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="event event-description-right">
-								<h4>Senior Software Developer at Lightstone Labs</h4>
-								<p>
-									During my two years at Lightstone Labs, I worked on numerous projects across several different domains.
-									Here are some of the notable products.	
-								</p>
-								<div>
-									Products:
-									<a class="customAnchor" href="https://angel.co/projects/1128595-masmic" target="_blank">Masmic</a>,
-									<a class="customAnchor" href="https://angel.co/projects/1139736-swiflearn" target="_blank">Swiflearn</a>,
-									<a class="customAnchor" href="https://angel.co/projects/1139732-msmex" target="_blank">MSMEx</a>,
-									<a class="customAnchor" href="https://angel.co/projects/1139740-koinok" target="_blank">KoinOK</a>,
+						<div class="col-sm-6"  :class="ei%2 !== 0 ? 'col-sm-pull-6': ''">
+							<div class="event" :class="ei%2 !== 0 ? 'event-description-left' : 'event-description-right'">
+								<h4 v-html="event.title"></h4>
+								<span v-html="event.description"></span>
+								<div vi-f="event.products">
+									<span v-html="event.products"></span>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item">
-					<div class="row">
-						<div class="col-sm-6 col-sm-push-6">
-							<div class="duration duration-right">May 2017 - June 2018</div>
-						</div>
-						<div class="col-sm-6 col-sm-pull-6">
-							<div class="event event-description-left">
-								<h4>Frontend Engineer at HireXP</h4>
-								<p>
-									Founding team member at <a class="customAnchor" href="https://www.hirexp.com/" target="_blank">hireXP</a>.
-									Developed a solution which streamlines recruitment process and gives you complete control & visibility into your recruitment process.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="duration duration-left">2017</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="event event-description-right">
-								<h4>System Engineer at Infosys</h4>
-								<p>
-									From college, I got placed in Infosys.
-									I made some great friends, Travelled a lot,
-									met some amazing people,
-									And started my career as a Developer.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item">
-					<div class="row">
-						<div class="col-sm-6 col-sm-push-6">
-							<div class="duration duration-right">2015</div>
-						</div>
-						<div class="col-sm-6 col-sm-pull-6">
-							<div class="event event-description-left">
-								<h4>Redhat Certified Engineer</h4>
-								<p>
-									Completed <span style="font-weight: bold;">"Red Hat Certified System Administrator (RHCSA®)"</span> and <span style="font-weight: bold;">Red Hat Certified Engineer (RHCE®)</span> under mentorship of
-									<a class="customAnchor" href="https://www.linkedin.com/in/codeburster/" target="_blank">Mr. Mayank Sachan</a>
-									who helped me took away my phobia of terminals and CLI.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="duration duration-left">2014</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="event event-description-right">
-								<h4>Certified Ethical Hacker</h4>
-								<p>Became a professional ethical hacker under merntorship of <a class="customAnchor" href="https://www.linkedin.com/in/viditbaxi/" target="_blank">Mr. Vidit Baxi</a>
-								who showed me how awesome things are done in real world.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item">
-					<div class="row">
-						<div class="col-sm-6 col-sm-push-6">
-							<div class="duration duration-right">2013-2017</div>
-						</div>
-						<div class="col-sm-6 col-sm-pull-6">
-							<div class="event event-description-left">
-								<h4>Persued Engineering from TIT&s</h4>
-								<p>Tits, Yup, No kidding! Completed my batchelor's in computer science from
-									TITS (The Technological Institute of Textile & Sciences)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="duration duration-left">1998 - 2013</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="event event-description-right">
-								<h4>Stuidied at Jain Public School</h4>
-								<p>
-									Memories have been the part and parcel of my life, much like everyone else.
-									Some of the good memories in life are definitely of my school life.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="event-item marginless">
-					<div class="row">
-						<div class="col-sm-6 col-sm-push-6">
-							<div class="duration duration-right">1995 - present</div>
-						</div>
-						<div class="col-sm-6 col-sm-pull-6">
-							<div class="event event-description-left">
-								<h4>Swim champion 27<sup>th</sup> Aug 1995</h4>
-								<p>I was born with a twin sister, She is 7 minutes older then me. Which unfortunately
-									makes me the youngest in my family.</p>
 							</div>
 						</div>
 					</div>
@@ -846,7 +546,6 @@
 						</div>
 						<div style="position: relative; padding-bottom: 10px; padding-left: 30px;" class="reach">
 							<h4 class="white">Lets Stay Connected 🔗</h4>
-							<!-- <p>Earth</p> -->
 						</div>
 						<ul class="list-inline social-icons">
 							<li><a href="https://www.facebook.com/mayank.dhania" target="_blank"><i
@@ -857,24 +556,34 @@
 										class="icon ion-social-twitter"></i></a></li>
 							<li><a href="https://www.linkedin.com/in/mayankdhania/" target="_blank"><i
 										class="icon ion-social-linkedin"></i></a></li>
-							<!-- <li><a href="#"><i class="icon ion-social-googleplus"></i></a></li> -->
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
+</div>
 
-	<!-- Scripts
+<!-- Scripts
 ================================================= -->
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/plugins/parallax.hover.js"></script>
-	<script src="js/plugins/jquery.parallax-scroll.js"></script>
-	<script src="js/plugins/jquery.appear.js"></script>
-	<script src="js/plugins/jquery.easing.min.js"></script>
-	<script src="js/plugins/scrolling-nav.js"></script>
-	<script src="js/custom.js"></script>
+<script src="js/vue-scripts.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<!-- <script src="js/jquery-3.1.1.min.js"></script> -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
+
+<script src="js/plugins/parallax.hover.js"></script>
+<script src="js/plugins/jquery.parallax-scroll.js"></script>
+
+<script src="js/plugins/jquery.appear.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.compatibility.min.js"></script>
+<!-- <script src="js/plugins/jquery.easing.min.js"></script> -->
+
+<script src="js/plugins/scrolling-nav.js"></script>
+<script src="js/custom.js"></script>
 </body>
 
 </html>
