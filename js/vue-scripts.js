@@ -1,5 +1,32 @@
 const vueAppIntro = new Vue({
-    el: '#scene2',
+    el: '#paralaxWeb',
+    data: {
+        name: 'Mayank Shaan Dhania',
+        activeParalax: null,
+    },
+    methods: {
+        parseQueryParams() {
+            var params = new URLSearchParams (document.location.search.substring(1));
+            var paralax = params.get("paralax");
+            if (paralax) {
+                this.activeParalax = paralax;
+            } else {
+                this.activeParalax = 'pushkar';
+            }
+        },
+        updateParalax() {
+            var url = window.location.origin;    
+            if(!this.activeParalax || this.activeParalax == 'pushkar') {
+                url += '?paralax=kashmir'
+            } else {
+                url += '?paralax=pushkar'
+            } 
+            window.location.href = url;
+        }
+    },
+    mounted() {
+        this.parseQueryParams();
+    },
     computed: {
         supportsWebPComputed: function () {
             return window && window.Modernizr && window.Modernizr.webplossless;
@@ -56,32 +83,46 @@ data: {
     testimonials: [
         {
             name: "Shubham Patlani",
-            image: "media/designer/patlani-old.jpg",
+            image: "media/designer/testimonials/patlani-old.jpg",
             post: "<p class='text-muted'>Partner technology at <span class='orange'>hireXP</span></p>",
             message: "Working with Mayank was better than expected and we had really high expectations. He is an incredibly talented developer but what really makes him stand out is his work ethic and steady approach. Time after time, and without us asking, he added enhancements and improvements that resulted in a better end product for us and our clients..",
             classes: "item active"
         },
         {
-            name: "Mark",
-            image: "media/designer/mark.jpg",
-            post: "<p class='text-muted'>CEO at <span class='orange'>Facebook</span></p>",
-            message: "Mayank is an excellent web designer and faultless technician. He’s a pleasure to work with, great value for money and will always go the extra mile when necessary.",
-            classes: "item"
-        },
-        {
-            name: "Akshay",
-            image: "media/designer/akshay.jpg",
-            post: "<p class='text-muted'>Partner technology at <span class='orange'>hireXP</span></p>",
-            message: "Mayank has done a fantastic job overall. Not only the site is to design, the code is very clean and slick. Love the way he achieved the translations portion of the site.",
+            name: "Ashwani Agarwal",
+            image: "media/designer/testimonials/ashwani.jpg",
+            post: "<p class='text-muted'>Senior Software Developer at <span class='orange'>Airtel</span></p>",
+            message: "The sheer passion to get things done is what put him on the cream layer of developers. He is a quick learner, creative, logical, get-it-done kind of person. We (as in Developers) often complain about context-switching deteriorates productivity, Mayank has managed to surpass that barrier. He is evenly considerate of the non-development aspects of building and launching a product.",
             classes: "item"
         },
         {
             name: "Barak Obama",
-            image: "media/designer/obama.jpg",
+            image: "media/designer/testimonials/obama.jpg",
             post: "<p class='text-muted'>Former president at <span class='orange'>The United states of America</span></p>",
             message: "We have the fortune of working with Mayank on a very regular basis. Every single project is done in a timely fashion and is delivered exactly as is outlined. Beyond that, his development skills and expertise make him an invaluable part of our process. We absolutely offer our highest possible recommendation.",
             classes: "item"
         },
+        {
+            name: "Rohit Jindal",
+            image: "media/designer/testimonials/rohit.jpg",
+            post: "<p class='text-muted'>Head of Marketing and Growth at <span class='orange'>Swiflearn</span></p>",
+            message: "Mayank was responsible for front-end development of Masmic platform. I had a great time working with him. He is very talented, always curious to learn more and has a sense of ownership for his work. Happy to recommend him!",
+            classes: "item"
+        },
+        {
+            name: "Akshay",
+            image: "media/designer/testimonials/akshay.jpg",
+            post: "<p class='text-muted'>Partner technology at <span class='orange'>hireXP</span></p>",
+            message: "Mayank has done a fantastic job overall. Not only the site is to design, the code is very clean and slick. Love the way he achieved the translations portion of the site.",
+            classes: "item"
+        },
+        // {
+        //     name: "Mark",
+        //     image: "media/designer/testimonials/mark.jpg",
+        //     post: "<p class='text-muted'>CEO at <span class='orange'>Facebook</span></p>",
+        //     message: "Mayank is an excellent web designer and faultless technician. He’s a pleasure to work with, great value for money and will always go the extra mile when necessary.",
+        //     classes: "item"
+        // },
     ],
 }
 })
@@ -153,7 +194,7 @@ data: {
             title: "Swim champion 27<sup>th</sup> Aug 1995",
             duration: "1995 - present",
             description: "<p>I was born with a twin sister, She is 7 minutes older then me. Which unfortunately makes me the youngest in my family.</p>",
-            eventClass: "event-item",
+            eventClass: "event-item marginless",
         },
     ],
 }

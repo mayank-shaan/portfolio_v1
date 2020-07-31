@@ -164,7 +164,8 @@ section{
 .btn-primary:focus{
   background: #D7DF23;
   border: 2px solid #D7DF23;
-  color: #fff;
+  color: #515151;
+  /* color: #fff; */
   transition: all .5s;
 }
 
@@ -307,11 +308,13 @@ Intro Section
 ==================================================*/
 
 #intro{
-  background: #000;
+  /* background: #000; */
   text-align: center;
   position: relative;
 }
-
+.intro-container {
+  background: #000;
+}
 #intro::after{
   content: "";
   background: rgba(249,237,50, .3);
@@ -320,6 +323,10 @@ Intro Section
   height: 60px;
   left: 50%;
   bottom: -60px;
+}
+
+#paralaxWeb.clip-bottom{
+  clip-path: polygon(0 0%, 100% 0, 100% 80%, 0% 100%);
 }
 
 h1.name{
@@ -333,6 +340,13 @@ h1.name-sm{
   font-family: "Ailerons";
   font-size: 110px;
   color: rgba(255,255,255, .5);
+  text-align: center;
+}
+
+h1.name-white{
+  font-family: "Ailerons";
+  font-size: 110px;
+  color: #fff;
   text-align: center;
 }
 
@@ -799,12 +813,13 @@ Testimonials Section
 
 .carousel-indicators{
   position:static;
+  margin-top: 20px;
   margin-left:0px;
   width:100%;
 }
 
 .carousel-indicators li{
-  border: 1px solid #F9ED32;
+  border: 1px solid #929292;
 }
 
 .carousel-indicators .active{

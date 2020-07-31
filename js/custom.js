@@ -26,7 +26,7 @@ $(window).on('load', function() {
 
     //testimonial carousel
     $('#carousel-testimonials').carousel({
-        interval: 3000 //TIME IN MILLI SECONDS
+        interval: 4000 //TIME IN MILLI SECONDS
     });
 
     // trigger page scroll trigger
@@ -91,7 +91,7 @@ $(window).on('load', function() {
                 $(this).appear(function() {
                     $(this).find('.count-bar').animate({
                         width: jQuery(this).attr('data-percent')
-                    }, 3000);
+                    }, 1500);
                     var percent = jQuery(this).attr('data-percent');
                     $(this).find('.count').html('<span>' + percent + '</span>');
                 });
