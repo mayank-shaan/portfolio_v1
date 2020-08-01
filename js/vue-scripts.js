@@ -1,4 +1,4 @@
-const vueAppIntro = new Vue({
+const vueAppParalaxWeb = new Vue({
     el: '#paralaxWeb',
     data: {
         name: 'Mayank Shaan Dhania',
@@ -27,6 +27,38 @@ const vueAppIntro = new Vue({
     mounted() {
         this.parseQueryParams();
     },
+    computed: {
+        supportsWebPComputed: function () {
+            return window && window.Modernizr && window.Modernizr.webplossless;
+        },
+    }
+});
+
+const vueAppParalaxMobile = new Vue({
+    el: '#paralaxMobile',
+    data: {
+        name: 'Mayank Shaan Dhania',
+        currentPost: 'I am a developer/designer',
+        currentPostIndex: 0,
+        posts: ['designer', 'artist', 'abc', 'asdas', 'asdasd']
+    },
+    // methods: {
+    //     postUpdater() {
+    //         const totalLength = this.posts.length;
+    //         if (this.currentPostIndex == (totalLength - 1)) {
+    //             this.currentPostIndex = 0;
+    //         } else {
+    //             this.currentPostIndex += 1;
+    //         } 
+    //         this.currentPost = 'I am a developer/' + this.posts[this.currentPostIndex]; 
+    //         this.$forceUpdate();
+    //     },
+    // },
+    // mounted() {
+    //     setInterval(() => {
+    //         this.postUpdater();
+    //     }, 500);
+    // },
     computed: {
         supportsWebPComputed: function () {
             return window && window.Modernizr && window.Modernizr.webplossless;

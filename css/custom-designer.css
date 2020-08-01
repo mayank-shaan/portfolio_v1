@@ -343,6 +343,13 @@ h1.name-sm{
   text-align: center;
 }
 
+h2.name-sm{
+  font-family: "Ailerons";
+  font-size: 40px;
+  color: rgba(255,255,255, .5);
+  text-align: center;
+}
+
 h1.name-white{
   font-family: "Ailerons";
   font-size: 110px;
