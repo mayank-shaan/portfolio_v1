@@ -164,9 +164,9 @@ el: '#timeline',
 data: { 
     timelineEvents: [
         {
-            title: "Senior Frontend Developer at Oye! Rickshaw",
-            duration: "June 2020 - present",
-            description: "<p> Oye! Rickshaw provides an app-based e-rickshaw booking facility to the users. We connect people with public transportation and nearby public places. </p>",
+            title: "Software Engineer III at Walmart Labs",
+            duration: "August 2020 - present",
+            description: "<p>Walmart Labs is the technology arm of <b>Walmart</b>. Reimagining retail for our 260 million daily shoppers</p>",
             eventClass: "event-item",
         },
         {
@@ -177,7 +177,7 @@ data: {
         },
         {
             title: "Senior Software Developer at Lightstone Labs",
-            duration: "August 2018 - July 2020",
+            duration: "August 2018 - August 2020",
             description: "<p> During my two years at Lightstone Labs, I worked on numerous projects across several different domains. Here are some of the notable products. </p>",
             products: "Products:" +
                         "<a class='customAnchor' href='https://angel.co/projects/1128595-masmic' target='_blank'>Masmic</a>," +
