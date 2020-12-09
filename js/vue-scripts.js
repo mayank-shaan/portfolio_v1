@@ -172,7 +172,7 @@ data: {
         {
             title: "Hugged Shah Rukh Khan ❤️",
             duration: "December 17 2018",
-            description: "<p>Yes that actually happend. <a class='customAnchor' href='https://www.facebook.com/photo.php?fbid=2157405180978918&set=a.123091254410331&type=3&theater' target='_blank'> Check for yourslef 😛 </a> </p>",
+            description: "<p>Yes that actually happend. <a class='customAnchor' href='https://www.facebook.com/photo.php?fbid=2157405180978918&set=a.123091254410331&type=3&theater' target='_blank'> Check for yourself 😛 </a> </p>",
             eventClass: "event-item",
         },
         {
