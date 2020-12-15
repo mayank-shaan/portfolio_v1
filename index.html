@@ -464,56 +464,67 @@
 			</div>
 		</section>
 
-		<!-- Portfolio Section
-================================================= -->
-		<!-- <section id="folio">
-		<div class="container wrapper">
-			<div class="headline">
-				<h2><span class="yellow">My</span> Folio</h2>
-			</div>
-
-			<ul class="folio-menu list-inline">
-				<li class=" fil-cat" data-rel="all">All</li>
-				<li class=" fil-cat" data-rel="web">Websites</li>
-				<li class=" fil-cat" data-rel="flyers">Web Apps</li>
-				<li class=" fil-cat" data-rel="bcards">Other Cool stuff</li>
-			</ul>
-
-			<div id="portfolio">
-				<div class="tile scale-anm web all">
-					<img src="media/designer/portfolio/1.jpg" alt="msd" data-toggle="modal" data-target=".project-1" />
+		<!-- Portfolio Section ================================================= -->
+		<section id="folio">
+			<div class="container wrapper">
+				<div class="headline">
+					<h2><span class="yellow">My</span> Folio</h2>
 				</div>
-				<div class="tile scale-anm web all">
-					<img src="media/designer/portfolio/2.jpg" alt="msd" data-toggle="modal" data-target=".project-2" />
-				</div>
-				<div class="tile scale-anm flyers all">
-					<img src="media/designer/portfolio/3.jpg" alt="msd" data-toggle="modal" data-target=".project-3" />
-				</div>
-			</div>
 
-			<div class="modal fade project-1" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-						<img src="media/designer/portfolio/1.jpg" alt="msd" class="img-responsive" />
+				<ul class="folio-menu list-inline">
+					<li class="fil-cat" :data-rel="title.type" v-for="title in navBarTitles" :key="title.name">{{title.name}}</li>
+				</ul>
+
+				<!-- <div> -->
+				<div id="portfolio">
+					<div v-for="(project, pi) in shuffle(projects)"
+						class="tile scale-anm all"
+						:class="project.type"
+						>
+						<!-- @mouseenter="mouseOver(project.name)"
+						@mouseleave="mouseOver('')" -->
+						<!-- <div class="project-name" v-if="mouseoverActive && mouseoverActive == project.name">
+							{{project.name}}
+						</div> -->
+						<img :src="project.thumbnail || project.image" alt="msd" data-toggle="modal" :data-target="`.project-${pi+1}`" />
 					</div>
 				</div>
-			</div>
-			<div class="modal fade project-2" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content row">
-						<img src="media/designer/portfolio/2.jpg" alt="msd" class="img-responsive" />
+			
+				<!-- models for data after click -->
+				<div v-for="(project, pi) in projects" class="modal fade" :class="`project-${pi+1}`" tabindex="-1" role="dialog">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="project-name">
+								{{project.name}}
+							</div>
+							<div class="project-title">
+								{{project.title}}
+							</div>
+							<div v-if="project.action === ''">
+								<img :src="project.image" alt="msd" class="img-responsive" />
+							</div>
+							<div v-if="project.action === 'IFRAME'">
+								<div style="height: 50vh; width: 100%;">
+									<iframe width="100%" height="100%"
+										style="border-radius: 16px; box-shadow: 0 3px 24px 0 rgba(245, 167, 188, 0.16);"
+										:src="project.link"
+										frameBorder="0"
+										allow="accelerometer, autoplay; encrypted-media; gyroscope; picture-in-picture"
+										allowFullScreen></iframe>
+								</div>
+							</div>
+							<div class="project-desc">
+								{{project.description}}
+							</div>
+							<button class="btn btn-secondary" @click="handleJumpToProject(project.link)">
+								Jump to project
+							</button>
+						</div>
 					</div>
 				</div>
+
 			</div>
-			<div class="modal fade project-3" tabindex="-1" role="dialog">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-						<img src="media/designer/portfolio/3.jpg" alt="msd" class="img-responsive" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
+		</section>
 
 		<!-- Testimonials Section  -->
 		<section id="testimonials">

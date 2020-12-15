@@ -42,23 +42,6 @@ const vueAppParalaxMobile = new Vue({
         currentPostIndex: 0,
         posts: ['designer', 'artist', 'abc', 'asdas', 'asdasd']
     },
-    // methods: {
-    //     postUpdater() {
-    //         const totalLength = this.posts.length;
-    //         if (this.currentPostIndex == (totalLength - 1)) {
-    //             this.currentPostIndex = 0;
-    //         } else {
-    //             this.currentPostIndex += 1;
-    //         } 
-    //         this.currentPost = 'I am a developer/' + this.posts[this.currentPostIndex]; 
-    //         this.$forceUpdate();
-    //     },
-    // },
-    // mounted() {
-    //     setInterval(() => {
-    //         this.postUpdater();
-    //     }, 500);
-    // },
     computed: {
         supportsWebPComputed: function () {
             return window && window.Modernizr && window.Modernizr.webplossless;
@@ -68,6 +51,206 @@ const vueAppParalaxMobile = new Vue({
 
 const vueAppIntroMobile = new Vue({
     el: '#scene',
+    computed: {
+        supportsWebPComputed: function () {
+            return window && window.Modernizr && window.Modernizr.webplossless;
+        },
+    }
+});
+
+const projectTypeConst = {
+    ALL: 'all',
+    WEBSITE: 'webSite',
+    WEBAPP: 'webApp',
+    OTHER: 'other',
+};
+
+var angelThumbnailSize = 'width=400,height=400';
+var angelThumbnailURL = `https://angel.co/cdn-cgi/image/${angelThumbnailSize},format=auto,fit=scale-down/https://s3.amazonaws.com/poly-screenshots.angel.co/Project/`;
+// var angelThumbnailSize = 'width=auto,height=auto';
+
+const vueAppFolio = new Vue({
+    el: '#folio',
+    methods: {
+        mouseOver: function(name){
+            this.mouseoverActive = name;
+        },
+        handleJumpToProject: function(link){
+            console.log('mouseover', link);
+            window.open(link, "_blank")
+        },
+        shuffle: function(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+        }
+    },
+    data: {
+        mouseoverActive: false,
+        navBarTitles: [
+            {
+                name: 'All',
+                type: projectTypeConst.ALL,
+            },
+            {
+                name: 'Web Apps',
+                type: projectTypeConst.WEBAPP,
+            },
+            {
+                name: 'Web Sites',
+                type: projectTypeConst.WEBSITE,
+            },
+            {
+                name: 'Other cool stuff',
+                type: projectTypeConst.OTHER,
+            },
+        ],
+        projects: [
+            {
+                name: 'Masmic',
+                type: projectTypeConst.WEBAPP,
+                title: "A platform to crowd source users Opinions, Ideas and Wisdom",
+                description: "Masmic is an online social media Q&A platform where users are incentivized for answering the questions asked by other users. Best answers are voted by the masmic community which are also incentivized for their voting activity. The incentive mechanism is powered by stellar blockchain on which the Masmic token (MAT) runs. User can buy MAT tokens by depositing btc, eth or xlm tokens on the token sale page. On masmic, a user can also participate in the affiliate program by doing promotional activity on the popular social channels like Facebook, Youtube, Reddit etc. and earn MAT tokens.",
+                image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/94/1128595/86f20a48308379812386f28c15446410-original.png',
+                thumbnail: `${angelThumbnailURL}94/1128595/86f20a48308379812386f28c15446410-original.png`,
+                action: '',
+                link: 'https://angel.co/projects/1128595-masmic',
+            },
+            {
+                name: 'MSMEx',
+                type: projectTypeConst.WEBAPP + ' ' + projectTypeConst.WEBSITE,
+                title: "Experts sharing their insights through interactive videos.",
+                description: "The project connects industry experts with small and medium scale company promoters. The interaction happens online via video and audio conferencing which works on android, mobile and web browser. The video interaction supports both one-to-one and one-to-many format.",
+                image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/14/1139732/a7af107f17c3fe55cfea01a2e557fcf7-original.png',
+                thumbnail: `${angelThumbnailURL}14/1139732/a7af107f17c3fe55cfea01a2e557fcf7-original.png`,
+                action: '',
+                link: 'https://www.msmex.in/',
+            },
+            {
+                name: 'Swiflearn',
+                type: projectTypeConst.WEBAPP + ' ' + projectTypeConst.WEBSITE,
+                title: "An Online Tuition platform, Face-to-Face and LIVE",
+                description: "Swiflearn is an Online Tuition platform providing Face-to-Face LIVE Classes for Grades 5-10, Math, Science & English.",
+                image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/28/1139736/c7c230a630d5abd10a93b9e4881b181a-original.jpg',
+                thumbnail: `${angelThumbnailURL}28/1139736/c7c230a630d5abd10a93b9e4881b181a-original.jpg`,
+                action: '',
+                link: 'https://swiflearn.com/',
+            },
+            {
+                name: 'KoinOK',
+                type: projectTypeConst.WEBAPP,
+                title: "Cryptocurrency Exchange",
+                description: "A cryptocurrency exchange which we have deployed for multiple clients based out of India, China and Singapore. As part of the white-label exchange setup, you will get the blockchain nodes setup for popular cryptocurrencies like bitcoin, ethereum, ripple, etc., configurable KYC module, highly secured wallets, infra setup on AWS with Auto-Scaling ensuring high availability, and a comprehensive admin dashboard. Exchange supports both fiat and crypto markets with payment gateway integration support for fiat currency deposits and withdrawals.",
+                image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/cd/1139740/0b1d8268e272512fe41dd2a2734a6a15-original.png',
+                thumbnail: `${angelThumbnailURL}cd/1139740/0b1d8268e272512fe41dd2a2734a6a15-original.png`,
+                action: '',
+                link: 'https://angel.co/projects/1139740-koinok',
+            },
+            {
+                name: 'hireXP',
+                type: projectTypeConst.WEBAPP + ' ' + projectTypeConst.WEBSITE,
+                title: "A new age recruitment & candidate experience software",
+                description: "hireXP is a new age recruitment solution that empowers you to hire the right candidate; every single time. Backed by a strong analytics framework, hireXP takes all the guesswork out of recruiting; allowing you to intelligently customize and automate key hiring processes, as per your evolving needs.",
+                image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/f7/716194/fe199c7c5c294304fb0d3e111f51071e-original.jpg',
+                thumbnail: `${angelThumbnailURL}f7/716194/fe199c7c5c294304fb0d3e111f51071e-original.jpg`,
+                action: '',
+                link: 'https://www.hirexp.com/',
+            },
+            {
+                name: 'CanXP',
+                type: projectTypeConst.WEBAPP,
+                title: "Tool for capturing feedback of candidates applying for a job",
+                description: "CanXP is a voice platform that enables you to keep your candidates engaged and informed at every stage of the hiring process.",
+                image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/32/755139/9835cec3937d6202be0eba8711e374ba-original.png',
+                thumbnail: `${angelThumbnailURL}32/755139/9835cec3937d6202be0eba8711e374ba-original.png`,
+                action: '',
+                link: 'https://www.hirexp.com/candidate-experience-software.html',
+            },
+            {
+                name: 'Smart Mirror (IoT)',
+                type: projectTypeConst.OTHER,
+                title: "It is a smart mirror. Based on Raspberry pi",
+                description: "With the help of Raspberry pi and good people at Github. created this awesome product which can tell - date,time,weather forecast,temperature,live news and a few other good things.",
+                image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/69/533320/d5b04d9cfdbd2706a7cc31f7708cd37b-original.jpg',
+                thumbnail: `${angelThumbnailURL}69/533320/d5b04d9cfdbd2706a7cc31f7708cd37b-original.jpg`,
+                action: '',
+                link: 'https://angel.co/projects/533320-smart-mirror-iot',
+            },
+            {
+                name: "'Kriti' - Magazine (2015, 2016)",
+                type: projectTypeConst.OTHER,
+                title: "Kriti is annual magazine of TIT&s. published every year to reflect the culture of the institution",
+                description: "After team collected all the data to be published, it was proofread and passed on to my team. Using tools like Corel Draw and Adobe Photoshop, My role was to make everything in the magazine look amazing.",
+                image: 'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/71/645519/d87f91d6c91c308e546c681d4d8003eb-original.jpg',
+                thumbnail: `${angelThumbnailURL}71/645519/d87f91d6c91c308e546c681d4d8003eb-original.jpg`,
+                action: '',
+                link: 'https://angel.co/projects/645519-kriti-annual-magazine-edition-2015-edition-2016',
+            },
+            {
+                name: "Pro Sports 11",
+                type: projectTypeConst.WEBSITE,
+                title: "ProSports11 is one of the India's fastest growing fantasy cricket app",
+                description: "",
+                image: 'https://ihdfantasy.com/wp-content/uploads/2019/04/prosports11-fantasy-cricket.jpg',
+                thumbnail: `https://solutions-assets.sftcdn.net/uploads/00000558085.jpg`,
+                action: '',
+                link: 'https://www.prosports11.com/',
+            },
+            {
+                name: "Holi celebrations in India",
+                type: projectTypeConst.OTHER,
+                title: "Holi celebrations in India | Braj | Nandgaon | Vrindavan | 2020 | MSD Media | Project Gulaal",
+                description: "Joy paints itself on everything, as the Holi hues spread across Braj, India. Though a widely celebrated festival throughout the country, Holi celebrations are unmatched here, spanning upto 10 days. The air is alive with abir and gulal, folk songs from the bards and happiness. Come to Braj on Holi, and get sketched in the colors of life.",
+                image: '',
+                thumbnail: `https://i.ytimg.com/vi/IJ0I0GqE9Vc/mqdefault.jpg`,
+                action: 'IFRAME',
+                link: 'https://www.youtube.com/embed/IJ0I0GqE9Vc?autoplay=0&rel=0',
+            },
+            {
+                name: "Anki Ki galati | Short Film",
+                type: projectTypeConst.OTHER,
+                description: "This film was completely made in 50 HOURS. Story, Scripting, Casting, Shooting, Dubbing, Editing, Music, Rendering... Everything !",
+                title: "",
+                image: '',
+                thumbnail: `https://i.ytimg.com/vi/zSV0m3fBXlQ/mqdefault.jpg`,
+                action: 'IFRAME',
+                link: 'https://www.youtube.com/embed/zSV0m3fBXlQ?autoplay=0&rel=0',
+            },
+            {
+                name: "Kashmir - Vlog 2019",
+                type: projectTypeConst.OTHER,
+                description: "We recently went to Srinagar for the holidays. Bhayankar bakchodi kari wahan pe ! It was a short trip so I tried to cover as many places as possible like Gulmarg, Pahalgam, and places in Srinagar like Dal lake and Mughal gardens. You’ll get to see beautiful valleys and greenery all around. Overall its a very beautiful place and we didn’t face any issues. Hope you guys enjoyed the vlog.",
+                title: "",
+                image: '',
+                thumbnail: `https://i.ytimg.com/vi/mBK3ZgenNKg/mqdefault.jpg`,
+                action: 'IFRAME',
+                link: 'https://www.youtube.com/embed/mBK3ZgenNKg?autoplay=0&rel=0',
+            },
+            {
+                name: "Google Home Mini vs Amazon Echo Dot",
+                type: projectTypeConst.OTHER,
+                description: "An objective comparison between the Google Home and Amazon Echo always-listening speakers.",
+                title: "",
+                image: '',
+                thumbnail: `https://i.ytimg.com/vi/uKKSVCf7BpU/mqdefault.jpg`,
+                action: 'IFRAME',
+                link: 'https://www.youtube.com/embed/uKKSVCf7BpU?autoplay=0&rel=0',
+            },
+        ],
+    },
     computed: {
         supportsWebPComputed: function () {
             return window && window.Modernizr && window.Modernizr.webplossless;

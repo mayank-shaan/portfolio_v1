@@ -656,6 +656,7 @@ Projects Section
 
 #folio{
   text-align: center;
+  padding-bottom: 40px;
 }
 
 /*Portfolio Menu*/
@@ -708,9 +709,57 @@ ul.folio-menu li:last-child::after{
 }
 
 .scale-anm {
-  transform: scale(1);
+  transform: scale(0.9);
+  /* transform: scale(1); */
+}
+.modal-content .project-name {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.modal-content .project-title {
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  /* padding-top: 20px; */
+  padding-bottom: 30px;
+}
+.modal-content .project-desc {
+  color: white;
+  text-align: left;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.modal-backdrop.in {
+  opacity: 0.7 !important;
 }
 
+@media only screen and (max-width : 480px) {
+  .modal-content .project-name {
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .modal-content .project-title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    /* padding-top: 20px; */
+    padding-bottom: 30px;
+  }
+  .modal-content .project-desc {
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
 .tile img {
   max-width: 100%;
   width: 100%;
@@ -727,6 +776,7 @@ ul.folio-menu li:last-child::after{
 
 .modal-content img{
   margin: auto;
+  max-height: 40vh;
 }
 
 
