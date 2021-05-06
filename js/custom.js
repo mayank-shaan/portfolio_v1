@@ -166,6 +166,7 @@ const handleSubmit = (e) => {
   e.preventDefault()
   let myForm = document.getElementById('contact-form');
   console.log('myForm: ', myForm)
+  console.log(new URLSearchParams(formData).toString(), 'test')
   let formData = new FormData(myForm)
   fetch('/', {
     method: 'POST',
