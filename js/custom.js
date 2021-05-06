@@ -166,8 +166,8 @@ const handleSubmit = (e) => {
   e.preventDefault()
   let myForm = document.getElementById('contact-form');
   console.log('myForm: ', myForm)
-  console.log(new URLSearchParams(formData).toString(), 'test')
   let formData = new FormData(myForm)
+  console.log(new URLSearchParams(formData).toString(), 'test')
   fetch('/', {
     method: 'POST',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
