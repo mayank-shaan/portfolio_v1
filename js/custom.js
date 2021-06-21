@@ -40,9 +40,20 @@ $(window).on('load', function() {
 
     //portfolio tab nativation
     $(function() {
-        var selectedClass = "";
+        // var selectedClass = "";
+
+        // <--remove this if you need all projects in the first load -->
+        var selectedClass = "all";
+        $("#portfolio div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
+            setTimeout(function() {
+                $("." + selectedClass).fadeIn().addClass('scale-anm');
+                $("#portfolio").fadeTo(300, 1);
+            }, 300);
+        // <---->
+
         $(".fil-cat").on('click', function() {
             selectedClass = $(this).attr("data-rel");
+            console.log('selectedClass: ', selectedClass);
             $("#portfolio").fadeTo(100, 0.1);
             $("#portfolio div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
             setTimeout(function() {
