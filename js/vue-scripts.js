@@ -49,6 +49,15 @@ const vueAppParalaxMobile = new Vue({
     }
 });
 
+const vueAbout = new Vue({
+    el: '#about',
+    computed: {
+        supportsWebPComputed: function () {
+            return window && window.Modernizr && window.Modernizr.webplossless;
+        },
+    }
+});
+
 const vueAppIntroMobile = new Vue({
     el: '#scene',
     computed: {
@@ -67,7 +76,6 @@ const projectTypeConst = {
 
 var angelThumbnailSize = 'width=400,height=400';
 var angelThumbnailURL = `https://angel.co/cdn-cgi/image/${angelThumbnailSize},format=auto,fit=scale-down/https://s3.amazonaws.com/poly-screenshots.angel.co/Project/`;
-// var angelThumbnailSize = 'width=auto,height=auto';
 
 const vueAppFolio = new Vue({
     el: '#folio',
@@ -353,6 +361,7 @@ data: {
 
 const vueAppTestimonials = new Vue({
 el: '#testimonials',
+methods: {},
 data: {
     title: "What my friends say",
     testimonials: [
@@ -414,7 +423,7 @@ data: {
         },
         {
             title: "Hugged Shah Rukh Khan ❤️",
-            duration: "December 17 2018",
+            duration: "December 17, 2018",
             description: "<p>Yes that actually happend. <a class='customAnchor' href='https://www.facebook.com/photo.php?fbid=2157405180978918&set=a.123091254410331&type=3&theater' target='_blank'> Check for yourself 😛 </a> </p>",
             eventClass: "event-item",
         },
@@ -432,43 +441,43 @@ data: {
         {
             title: "Frontend Engineer at HireXP",
             duration: "May 2017 - June 2018",
-            description: "<p> Founding team member at <a class='customAnchor' href='https://www.hirexp.com/' target='_blank'>hireXP</a>. Developed a solution which streamlines recruitment process and gives you complete control & visibility into your recruitment process. </p>",
+            description: "<p> Founding team member at <a class='customAnchor' href='https://www.hirexp.com/' target='_blank'>hireXP</a>. Developed a solution which streamlines recruitment process and gives you complete control & visibility into the recruitment process. </p>",
             eventClass: "event-item",
         },
         {
             title: "System Engineer at Infosys",
             duration: "2017",
-            description: "<p> From college, I got placed in Infosys. I made some great friends, Travelled a lot, met some amazing people, And started my career as a Developer. </p>",
+            description: "<p> I got placed from the college, and thus began my career as a Developer. Not only did I progress in my career, but I made some great friends, travelled places, and met some amazing people. </p>",
             eventClass: "event-item",
         },
         {
             title: "Redhat Certified Engineer",
             duration: "2015",
-            description: "<p> Completed <span style='font-weight: bold;'>\"Red Hat Certified System Administrator (RHCSA®)\"</span> and <span style='font-weight: bold;'>Red Hat Certified Engineer (RHCE®)</span> under mentorship of <a class='customAnchor' href='https://www.linkedin.com/in/codeburster/' target='_blank'>Mr. Mayank Sachan</a> who helped me took away my phobia of terminals and CLI. </p>",
+            description: "<p> Completed <span style='font-weight: bold;'>\"Red Hat Certified System Administrator (RHCSA®)\"</span> and <span style='font-weight: bold;'>Red Hat Certified Engineer (RHCE®)</span> under mentorship of <a class='customAnchor' href='https://www.linkedin.com/in/codeburster/' target='_blank'>Mr. Mayank Sachan.</a> I am thankful to him for helping me grow out of my phobia of terminals and CLI. </p>",
             eventClass: "event-item",
         },
         {
             title: "Certified Ethical Hacker",
             duration: "2014",
-            description: "<p>Became a professional ethical hacker under merntorship of <a class='customAnchor' href='https://www.linkedin.com/in/viditbaxi/' target='_blank'>Mr. Vidit Baxi</a> who showed me how awesome things are done in real world.</p>",
+            description: "<p>Became a professional ethical hacker under the merntorship of <a class='customAnchor' href='https://www.linkedin.com/in/viditbaxi/' target='_blank'>Mr. Vidit Baxi.</a> He is the one who showed me how awesome things are done in the real world.</p>",
             eventClass: "event-item",
         },
         {
             title: "Persued Engineering from TIT&s",
             duration: "2013-2017",
-            description: "<p>Tits, Yup, No kidding! Completed my batchelor's in computer science from TITS (The Technological Institute of Textile & Sciences)</p>",
+            description: "<p>Umm.. no. Don’t read it like that! I HAVE completed my bachelors in Computer Science from The Technological Institute of Textile & Sciences</p>",
             eventClass: "event-item",
         },
         {
             title: "Stuidied at Jain Public School",
             duration: "1998 - 2013",
-            description: "<p> Memories have been the part and parcel of my life, much like everyone else. Some of the good memories in life are definitely of my school life. </p>",
+            description: "<p>In terms of growing as an individual and making some fond memories, school has been an integral and foundational part of my life.</p>",
             eventClass: "event-item",
         },
         {
-            title: "Swim champion 27<sup>th</sup> Aug 1995",
-            duration: "1995 - present",
-            description: "<p>I was born with a twin sister, She is 7 minutes older then me. Which unfortunately makes me the youngest in my family.</p>",
+            title: "Youngest champion of my family",
+            duration: "August 27, 1995",
+            description: "<p>I was born with a twin sister. I let her come to the world first. And then crossed the finishing line seven minutes later.</p>",
             eventClass: "event-item marginless",
         },
     ],

@@ -258,6 +258,7 @@
 						</li>
 						<li class="layer expand-width" data-depth="0.40">
 							<img loading=lazy :src="'media/designer/intro-layer-self' + (supportsWebPComputed ? '.webp' : '.png')" alt="msd" class="img-responsive" />
+							<!-- <img loading=lazy :src="'media/designer/intro-layer-self-new' + (supportsWebPComputed ? '.webp' : '.png')" alt="msd" class="img-responsive" /> -->
 						</li>
 						<li class="layer expand-width" data-depth="0.55">
 							<img loading=lazy src="media/designer/intro-layer-4.png" alt="msd" class="img-responsive" />
@@ -296,7 +297,7 @@
 
 							<div class="photo">
 								<img loading=lazy src="media/designer/gradient-circle.png" alt="msd" class="photo-frame" />
-								<img loading=lazy src="media/designer/catman-min.jpg" alt="It's Me" class="my-photo img-circle" />
+								<img loading=lazy :src="'media/designer/about-laptop' + (supportsWebPComputed ? '.webp' : '.jpg')" alt="msd" class="my-photo img-circle" />
 							</div>
 							<ul class="social-link list-inline">
 								<li>
@@ -322,19 +323,21 @@
 							<div class="headline">
 								<h2>About <span class="yellow">Me</span></h2>
 							</div>
-							<p>I enjoy turning complex problems into simple, beautiful and intuitive designs. When I'm
-								not
-								coding, designing or pushing pixels, you'll find me cooking, gaming or taking
-								photographs in
-								the streets.</p>
-							<p>Developer from the India, focusing all his efforts on creating useful software products.
-								One
-								day he hopes to make something that impresses his Mum.</p>
+							<p>
+								Complications? Well, I need to be there!
+							</p>
+							<p>
+								I am a full stack front-end developer from India. And I enjoy turning complex problems into simple, beautiful, and intuitive designs!
+								I have my entire focus and efforts on creating useful software products.
+							</p>
+							<p>
+								When I'm not coding, designing, or pushing pixels; you’ll find me cooking, gaming, or taking photographs in the streets
+							</p>
 							<ul class="list-inline actions">
-								<li><a class="page-scroll" href="#footer"><button class="btn btn-primary">Hire
-											Me</button></a></li>
-								<!-- <li><a class="page-scroll" href="#folio"><button class="btn btn-primary">Folio</button></a></li> -->
-								<!-- <li><button class="btn btn-secondary">Folio</button></li> -->
+								<li>
+									<a class="page-scroll" href="#footer"><button class="btn btn-primary">Hire Me</button></a>
+								</li>
+								<li><a class="page-scroll" href="#folio"><button class="btn btn-secondary">Folio</button></a></li>
 							</ul>
 						</div>
 					</div>
@@ -342,8 +345,7 @@
 			</div>
 		</section>
 
-		<!-- Services
-================================================= -->
+		<!-- Services -->
 		<section id="services">
 
 			<!--Services Background-->
@@ -377,11 +379,10 @@
 							<div class="headline">
 								<h2 class="white">My Expertise</h2>
 							</div>
-							<p class="white">I've always been drawn to the overlap between design and development. My
-								skills
-								are broad: from ux to design, front-end to back-end development. I enjoy each aspect,
-								and
-								love building sites & mobile apps from start to finish, for clients all over the world.
+							<p class="white">
+								I’ve always been drawn to the overlap between design and development.
+								My skills are broad, ranging from ux to design, front-end to back-end development.
+								And I enjoy each aspect. I love building websites & mobile apps from start to finish, for clients all over the world.
 							</p>
 						</div>
 						<div class="col-md-5 col-md-offset-2">
@@ -400,8 +401,9 @@
 								<span class="service-icon"><i class="icon ion-ios-browsers-outline"></i></span>
 								<div class="item-info">
 									<h3 class="white">UI/UX designer</h3>
-									<p class="grey">UI/UX Designer with a passion for designing beautiful and functional
-										user experiences.</p>
+									<p class="grey">
+										As a designer, I am passionate about creating visually appealing and functional user experiences.
+									</p>
 								</div>
 							</div>
 							<div class="service-item">
@@ -414,11 +416,7 @@
 										</span>
 									</h3>
 									<p class="grey">
-										I like to present moments of my perceptions of a time and place,in a way for
-										others
-										to gain insight, emotion, and the opportunity to relate their own expirences to
-										that
-										moment
+										Through pictures, I try to portray my perception of time, space, emotions, and experiences; in a way that others get to relate to that moment.
 									</p>
 								</div>
 							</div>
@@ -473,11 +471,6 @@
 						class="tile scale-anm"
 						:class="project.type"
 						>
-						<!-- @mouseenter="mouseOver(project.name)"
-						@mouseleave="mouseOver('')" -->
-						<!-- <div class="project-name" v-if="mouseoverActive && mouseoverActive == project.name">
-							{{project.name}}
-						</div> -->
 						<img :src="project.thumbnail || project.image" alt="msd" data-toggle="modal" :data-target="`.project-${pi+1}`" />
 					</div>
 				</div>
@@ -630,9 +623,6 @@
 							<h2 class="white">Contact <span class="yellow">Me</span></h2>
 						</div>
 
-						<!--Contact Form-->
-							<!-- action="https://serverlessforms.com/api/form/2fb47434-d501-52af-af28-9a2d0f983087/form-response" -->
-							<!-- onsubmit="alert('Thanks, I have recived your message. And will revert back ASAP!')" -->
 						<form name="contact-form" method="POST" data-netlify="true"
 							class="contact-form" id="contact-form">
 							<div class="form-group">
@@ -657,9 +647,6 @@
 								Send message
 							</button>
 						</form>
-						<!-- <button class="btn btn-secondary" type="submit" form="contact-form" value="Submit">
-							Send message
-						</button> -->
 
 					</div>
 					<div class="col-md-5">
@@ -743,7 +730,7 @@
 	<script src="js/plugins/jquery.appear.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.compatibility.min.js"></script>
-	<!-- <script src="js/plugins/jquery.easing.min.js"></script> -->
+	<script src="js/plugins/jquery.easing.min.js"></script>
 
 	<script src="js/plugins/scrolling-nav.js"></script>
 	<script src="js/custom.js"></script>
