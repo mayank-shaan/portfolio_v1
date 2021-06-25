@@ -459,7 +459,7 @@ data: {
         {
             title: "Certified Ethical Hacker",
             duration: "2014",
-            description: "<p>Became a professional ethical hacker under the merntorship of <a class='customAnchor' href='https://www.linkedin.com/in/viditbaxi/' target='_blank'>Mr. Vidit Baxi.</a> He is the one who showed me how awesome things are done in the real world.</p>",
+            description: "<p>Became a professional ethical hacker under the merntorship of <a class='customAnchor' href='https://www.linkedin.com/in/viditbaxi/' target='_blank'>Mr. Vidit Baxi.</a> He introduced me to a world that I’ll forever be in awe of, for all the cool stuff it offers!</p>",
             eventClass: "event-item",
         },
         {
